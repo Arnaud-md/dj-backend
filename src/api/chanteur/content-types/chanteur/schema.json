@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chanteurs",
+  "info": {
+    "singularName": "chanteur",
+    "pluralName": "chanteurs",
+    "displayName": "Chanteur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Prenom": {
+      "type": "string"
+    },
+    "Date_de_naissance": {
+      "type": "date"
+    },
+    "musiques": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::musique.musique",
+      "mappedBy": "chanteur"
+    }
+  }
+}
